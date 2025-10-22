@@ -4,7 +4,7 @@
 
 ## 📖 Overview
 
-This project forecasts stock prices using a \*\*Long Short-Term Memory (LSTM)\*\* neural network.  
+This project forecasts stock prices using a **Long Short-Term Memory (LSTM)** neural network.  
 
 The goal is to capture temporal dependencies in financial time series data and evaluate the model’s predictive performance on unseen stock price sequences.
 
@@ -22,7 +22,7 @@ stock\_price\_forecasting/
 
 ├── src/         # pipeline.py (10-step ML workflow)  
 
-├── results/     # metrics.json, *\_price\_trend.png  
+├── results/     # metrics.json, *\_price\_trend*.png  
 
 ├── models/      # lstm\_stock\_*.h5 (trained model), scaler\_stock\_*.pkl  
 
