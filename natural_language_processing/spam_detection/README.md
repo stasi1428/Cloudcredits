@@ -1,12 +1,12 @@
-\# 📧 Spam Detection (Enron Dataset)
+# 📧 Spam Detection (Enron Dataset)
 
 
 
-\## 📖 Overview
+## 📖 Overview
 
-This project classifies emails as \*\*ham (legitimate)\*\* or \*\*spam\*\* using the \*\*Enron email dataset\*\*.  
+This project classifies emails as **ham (legitimate)** or **spam** using the **Enron email dataset**.  
 
-The goal is to benchmark \*\*Naive Bayes\*\* and \*\*Linear SVM\*\* classifiers, evaluate their performance, and select the best model through hyperparameter tuning.
+The goal is to benchmark **Naive Bayes** and **Linear SVM** classifiers, evaluate their performance, and select the best model through hyperparameter tuning.
 
 
 
@@ -14,7 +14,7 @@ The goal is to benchmark \*\*Naive Bayes\*\* and \*\*Linear SVM\*\* classifiers,
 
 
 
-\## 📂 Project Structure
+## 📂 Project Structure
 
 spam\_detection/  
 
@@ -36,49 +36,31 @@ spam\_detection/
 
 
 
-\## 🛠️ Workflow
+## 🛠️ Workflow
 
-This project follows the \*\*10-step ML workflow\*\*:
-
-
-
-1\. Define Problem  
-
-2\. Load \& Clean Data (remove HTML tags, lowercase, strip punctuation, normalize whitespace)  
-
-3\. Exploratory Data Analysis (EDA) → category counts, message length distribution  
-
-4\. Feature Engineering → TF-IDF vectorization (unigrams + bigrams)  
-
-5\. Train/Test Split (80/20, stratified)  
-
-6\. Model Selection → Naive Bayes, Linear SVM  
-
-7\. Training  
-
-8\. Evaluation (accuracy, precision, recall, F1-score, classification report)  
-
-9\. Improvement → hyperparameter tuning (GridSearchCV for both models)  
-
-10\. Deployment (FastAPI-ready model)
+This project follows the **10-step ML workflow**:
 
 
 
----
+1. Define Problem  
 
+2. Load \& Clean Data (remove HTML tags, lowercase, strip punctuation, normalize whitespace)  
 
+3. Exploratory Data Analysis (EDA) → category counts, message length distribution  
 
-\## 📊 Dataset
+4. Feature Engineering → TF-IDF vectorization (unigrams + bigrams)  
 
-\- \*\*Source\*\*: Enron email dataset (`enron\_email\_data.csv`)  
+5. Train/Test Split (80/20, stratified)  
 
-\- \*\*Size\*\*: Thousands of emails (ham + spam)  
+6. Model Selection → Naive Bayes, Linear SVM  
 
-\- \*\*Features\*\*: `message` (email text)  
+7. Training  
 
-\- \*\*Target Variable\*\*: `category` (ham = 0, spam = 1)  
+8. Evaluation (accuracy, precision, recall, F1-score, classification report)  
 
-\- \*\*Preprocessing\*\*: HTML tag removal, lowercasing, punctuation removal, whitespace normalization
+9. Improvement → hyperparameter tuning (GridSearchCV for both models)  
+
+10. Deployment (FastAPI-ready model)
 
 
 
@@ -86,13 +68,31 @@ This project follows the \*\*10-step ML workflow\*\*:
 
 
 
-\## 🤖 Models Used
+## 📊 Dataset
 
-\- \*\*Naive Bayes (MultinomialNB)\*\* with TF-IDF features  
+- **Source**: Enron email dataset (`enron\_email\_data.csv`)  
 
-\- \*\*Linear SVM (LinearSVC)\*\* with TF-IDF features  
+- **Size**: Thousands of emails (ham + spam)  
 
-\- \*\*Final Selected Model\*\*: Best tuned model (Naive Bayes or SVM, depending on F1-score)  
+- **Features**: `message` (email text)  
+
+- **Target Variable**: `category` (ham = 0, spam = 1)  
+
+- **Preprocessing**: HTML tag removal, lowercasing, punctuation removal, whitespace normalization
+
+
+
+---
+
+
+
+## 🤖 Models Used
+
+- **Naive Bayes (MultinomialNB)** with TF-IDF features  
+
+- **Linear SVM (LinearSVC)** with TF-IDF features  
+
+- **Final Selected Model**: Best tuned model (Naive Bayes or SVM, depending on F1-score)  
 
 &nbsp; - Saved as `spam\_nb\_pipeline.joblib` or `spam\_svm\_pipeline.joblib`
 
@@ -102,7 +102,7 @@ This project follows the \*\*10-step ML workflow\*\*:
 
 
 
-\## 📈 Results
+## 📈 Results
 
 Evaluation metrics are stored in `results/metrics.json`. Example structure:
 
@@ -148,9 +148,9 @@ Evaluation metrics are stored in `results/metrics.json`. Example structure:
 
 Generated plots:
 
-\- `results/category\_counts.png` → ham vs spam distribution  
+- `results/category\_counts.png` → ham vs spam distribution  
 
-\- `results/message\_length\_distribution.png` → message length by category  
+- `results/message\_length\_distribution.png` → message length by category  
 
 
 
@@ -158,9 +158,9 @@ Generated plots:
 
 
 
-\## 🚀 Deployment
+## 🚀 Deployment
 
-The trained model is deployed via \*\*FastAPI\*\*.
+The trained model is deployed via **FastAPI**.
 
 
 
@@ -174,7 +174,7 @@ uvicorn main:app --reload
 
 Endpoint:
 
-\- `POST /predict` → returns spam/ham classification
+- `POST /predict` → returns spam/ham classification
 
 
 
@@ -182,7 +182,7 @@ Endpoint:
 
 
 
-\## 📜 License
+## 📜 License
 
-This project is licensed under the \[MIT License](../../LICENSE).
+This project is licensed under the [MIT License](LICENSE).
 
