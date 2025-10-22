@@ -1,12 +1,12 @@
-\# 🚢 Titanic Survival Prediction
+# 🚢 Titanic Survival Prediction
 
 
 
-\## 📖 Overview
+## 📖 Overview
 
 This project predicts passenger survival on the Titanic using machine learning models.  
 
-The dataset includes demographic and ticket information, and the goal is to benchmark \*\*Logistic Regression\*\* and \*\*Random Forest\*\* classifiers, with hyperparameter tuning to optimize performance.
+The dataset includes demographic and ticket information, and the goal is to benchmark **Logistic Regression** and **Random Forest** classifiers, with hyperparameter tuning to optimize performance.
 
 
 
@@ -14,7 +14,7 @@ The dataset includes demographic and ticket information, and the goal is to benc
 
 
 
-\## 📂 Project Structure
+## 📂 Project Structure
 
 titanic\_survival/  
 
@@ -36,47 +36,31 @@ titanic\_survival/
 
 
 
-\## 🛠️ Workflow
+## 🛠️ Workflow
 
-This project follows the \*\*10-step ML workflow\*\*:
-
-
-
-1\. Define Problem  
-
-2\. Load \& Clean Data (feature engineering: family size, imputation for age/embarked, drop irrelevant columns)  
-
-3\. Exploratory Data Analysis (EDA) → survival counts, age distribution, correlation heatmap  
-
-4\. Feature Engineering → scaling numeric features, one-hot encoding categorical features  
-
-5\. Train/Test Split (80/20, stratified)  
-
-6\. Model Selection → Logistic Regression, Random Forest  
-
-7\. Training  
-
-8\. Evaluation (accuracy, precision, recall, classification report)  
-
-9\. Improvement → hyperparameter tuning (Random Forest depth, estimators, min\_samples\_split)  
-
-10\. Deployment (FastAPI-ready model)
+This project follows the **10-step ML workflow**:
 
 
 
----
+1. Define Problem  
 
+2. Load \& Clean Data (feature engineering: family size, imputation for age/embarked, drop irrelevant columns)  
 
+3. Exploratory Data Analysis (EDA) → survival counts, age distribution, correlation heatmap  
 
-\## 📊 Dataset
+4. Feature Engineering → scaling numeric features, one-hot encoding categorical features  
 
-\- \*\*Source\*\*: Titanic dataset (`titanic.csv`)  
+5. Train/Test Split (80/20, stratified)  
 
-\- \*\*Size\*\*: ~891 rows × 12+ features  
+6. Model Selection → Logistic Regression, Random Forest  
 
-\- \*\*Features\*\*: pclass, sex, age, sibsp, parch, fare, embarked, family\_size  
+7. Training  
 
-\- \*\*Target Variable\*\*: `survived` (0 = No, 1 = Yes)
+8. Evaluation (accuracy, precision, recall, classification report)  
+
+9. Improvement → hyperparameter tuning (Random Forest depth, estimators, min\_samples\_split)  
+
+10. Deployment (FastAPI-ready model)
 
 
 
@@ -84,13 +68,15 @@ This project follows the \*\*10-step ML workflow\*\*:
 
 
 
-\## 🤖 Models Used
+## 📊 Dataset
 
-\- \*\*Logistic Regression\*\* (baseline)  
+- **Source**: Titanic dataset (`titanic.csv`)  
 
-\- \*\*Random Forest Classifier\*\* (baseline + tuned with GridSearchCV)  
+- **Size**: ~891 rows × 12+ features  
 
-\- \*\*Final Selected Model\*\*: Tuned Random Forest (saved as `titanic\_model.joblib`)
+- **Features**: pclass, sex, age, sibsp, parch, fare, embarked, family\_size  
+
+- **Target Variable**: `survived` (0 = No, 1 = Yes)
 
 
 
@@ -98,7 +84,21 @@ This project follows the \*\*10-step ML workflow\*\*:
 
 
 
-\## 📈 Results
+## 🤖 Models Used
+
+- **Logistic Regression** (baseline)  
+
+- **Random Forest Classifier** (baseline + tuned with GridSearchCV)  
+
+- **Final Selected Model**: Tuned Random Forest (saved as `titanic\_model.joblib`)
+
+
+
+---
+
+
+
+## 📈 Results
 
 Evaluation metrics are stored in `results/metrics.json`. Example structure:
 
@@ -148,11 +148,11 @@ Evaluation metrics are stored in `results/metrics.json`. Example structure:
 
 Generated plots:
 
-\- `results/survival\_counts.png` → survival distribution  
+- `results/survival\_counts.png` → survival distribution  
 
-\- `results/age\_distribution.png` → age distribution by survival  
+- `results/age\_distribution.png` → age distribution by survival  
 
-\- `results/correlation\_heatmap.png` → numeric feature correlations  
+- `results/correlation\_heatmap.png` → numeric feature correlations  
 
 
 
@@ -160,7 +160,7 @@ Generated plots:
 
 
 
-\## 🚀 Deployment
+## 🚀 Deployment
 
 The trained model is deployed via \*\*FastAPI\*\*.
 
@@ -176,7 +176,7 @@ uvicorn main:app --reload
 
 Endpoint:
 
-\- `POST /predict` → returns survival prediction
+- `POST /predict` → returns survival prediction
 
 
 
@@ -184,7 +184,7 @@ Endpoint:
 
 
 
-\## 📜 License
+## 📜 License
 
-This project is licensed under the \[MIT License](../../LICENSE).
+This project is licensed under the MIT License (LICENSE).
 
