@@ -22,9 +22,9 @@ stock\_price\_forecasting/
 
 ├── src/         # pipeline.py (10-step ML workflow)  
 
-├── results/     # metrics.json, \*\_price\_trend.png  
+├── results/     # metrics.json, *\_price\_trend.png  
 
-├── models/      # lstm\_stock\_\*.h5 (trained model), scaler\_stock\_\*.pkl  
+├── models/      # lstm\_stock\_*.h5 (trained model), scaler\_stock\_*.pkl  
 
 ├── api/         # FastAPI app for deployment  
 
