@@ -21,8 +21,8 @@ nltk
 # keras-preprocessing
 
 # Recommendation systems
-# conda install -c conda-forge scikit-surprise or pip install scikit-surprise
-scikit-surprise 
+# Note: install via pip or conda as needed
+scikit-surprise
 
 # API framework
 fastapi
