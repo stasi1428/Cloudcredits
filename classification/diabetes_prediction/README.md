@@ -192,5 +192,5 @@ Endpoint:
 
 ## 📜 License
 
-This project is licensed under the [MIT License]((https://github.com/stasi1428/Cloudcredits/blob/main/LICENSE)).
+This project is licensed under the [MIT License](../../LICENSE).
 
