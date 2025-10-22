@@ -1,12 +1,12 @@
-\# 🩺 Diabetes Prediction (Pima Indians Dataset)
+# 🩺 Diabetes Prediction (Pima Indians Dataset)
 
 
 
-\## 📖 Overview
+## 📖 Overview
 
-This project predicts the likelihood of diabetes in patients using the \*\*Pima Indians Diabetes dataset\*\*.  
+This project predicts the likelihood of diabetes in patients using the **Pima Indians Diabetes dataset**.  
 
-The goal is to benchmark \*\*K-Nearest Neighbors (KNN)\*\* and \*\*Logistic Regression\*\* classifiers, evaluate their performance, and select the best model through hyperparameter tuning.
+The goal is to benchmark **K-Nearest Neighbors (KNN)** and **Logistic Regression** classifiers, evaluate their performance, and select the best model through hyperparameter tuning.
 
 
 
@@ -14,7 +14,7 @@ The goal is to benchmark \*\*K-Nearest Neighbors (KNN)\*\* and \*\*Logistic Regr
 
 
 
-\## 📂 Project Structure
+## 📂 Project Structure
 
 diabetes\_prediction/  
 
@@ -36,49 +36,31 @@ diabetes\_prediction/
 
 
 
-\## 🛠️ Workflow
+## 🛠️ Workflow
 
-This project follows the \*\*10-step ML workflow\*\*:
-
-
-
-1\. Define Problem  
-
-2\. Load \& Clean Data (replace invalid zeros with NaN, impute with median)  
-
-3\. Exploratory Data Analysis (EDA) → outcome distribution, feature histograms, boxplots, correlation heatmap  
-
-4\. Feature Engineering → scaling numeric features  
-
-5\. Train/Test Split (80/20, stratified)  
-
-6\. Model Selection → KNN, Logistic Regression  
-
-7\. Training  
-
-8\. Evaluation (accuracy, precision, recall, F1-score, classification report)  
-
-9\. Improvement → hyperparameter tuning (GridSearchCV for KNN and Logistic Regression)  
-
-10\. Deployment (FastAPI-ready model)
+This project follows the **10-step ML workflow**:
 
 
 
----
+1. Define Problem  
 
+2. Load \& Clean Data (replace invalid zeros with NaN, impute with median)  
 
+3. Exploratory Data Analysis (EDA) → outcome distribution, feature histograms, boxplots, correlation heatmap  
 
-\## 📊 Dataset
+4. Feature Engineering → scaling numeric features  
 
-\- \*\*Source\*\*: Pima Indians Diabetes dataset (`pima\_indian\_diabetes.csv`)  
+5. Train/Test Split (80/20, stratified)  
 
-\- \*\*Size\*\*: 768 rows × 9 columns  
+6. Model Selection → KNN, Logistic Regression  
 
-\- \*\*Features\*\*: Glucose, BloodPressure, SkinThickness, Insulin, BMI, DiabetesPedigreeFunction, Age, Pregnancies  
+7. Training  
 
-\- \*\*Target Variable\*\*: `Outcome` (0 = No Diabetes, 1 = Diabetes)  
+8. Evaluation (accuracy, precision, recall, F1-score, classification report)  
 
-\- \*\*Preprocessing\*\*: Replaced invalid zero values with median imputation
+9. Improvement → hyperparameter tuning (GridSearchCV for KNN and Logistic Regression)  
+
+10. Deployment (FastAPI-ready model)
 
 
 
@@ -86,13 +68,31 @@ This project follows the \*\*10-step ML workflow\*\*:
 
 
 
-\## 🤖 Models Used
+## 📊 Dataset
 
-\- \*\*K-Nearest Neighbors (KNN)\*\*  
+- **Source**: Pima Indians Diabetes dataset (`pima\_indian\_diabetes.csv`)  
 
-\- \*\*Logistic Regression\*\* (liblinear solver)  
+- **Size**: 768 rows × 9 columns  
 
-\- \*\*Final Selected Model\*\*: Best tuned model (KNN or Logistic Regression, depending on F1-score)  
+- **Features**: Glucose, BloodPressure, SkinThickness, Insulin, BMI, DiabetesPedigreeFunction, Age, Pregnancies  
+
+- **Target Variable**: `Outcome` (0 = No Diabetes, 1 = Diabetes)  
+
+- **Preprocessing**: Replaced invalid zero values with median imputation
+
+
+
+---
+
+
+
+## 🤖 Models Used
+
+- **K-Nearest Neighbors (KNN)**  
+
+- **Logistic Regression** (liblinear solver)  
+
+- **Final Selected Model**: Best tuned model (KNN or Logistic Regression, depending on F1-score)  
 
 &nbsp; - Saved as `diabetes\_knn\_pipeline.joblib` or `diabetes\_logreg\_pipeline.joblib`
 
@@ -102,7 +102,7 @@ This project follows the \*\*10-step ML workflow\*\*:
 
 
 
-\## 📈 Results
+## 📈 Results
 
 Evaluation metrics are stored in `results/metrics.json`. Example structure:
 
