@@ -1,10 +1,10 @@
-\# 🎥 Movie Recommendation System (MovieLens)
+# 🎥 Movie Recommendation System (MovieLens)
 
 
 
-\## 📖 Overview
+## 📖 Overview
 
-This project builds a \*\*movie recommendation system\*\* using the \*\*MovieLens dataset\*\*.  
+This project builds a **movie recommendation system** using the **MovieLens dataset**.  
 
 The goal is to predict user ratings for unseen movies and generate personalized top‑N recommendations using collaborative filtering techniques.
 
@@ -14,7 +14,7 @@ The goal is to predict user ratings for unseen movies and generate personalized 
 
 
 
-\## 📂 Project Structure
+## 📂 Project Structure
 
 movie\_recommendation/  
 
@@ -36,47 +36,31 @@ movie\_recommendation/
 
 
 
-\## 🛠️ Workflow
+## 🛠️ Workflow
 
-This project follows the \*\*10-step ML workflow\*\*:
-
-
-
-1\. Define Problem  
-
-2\. Load \& Clean Data (ratings dataset)  
-
-3\. Exploratory Data Analysis (EDA) → rating distribution histogram  
-
-4\. Feature Engineering → user–item matrix for collaborative filtering  
-
-5\. Train/Test Split (80/20)  
-
-6\. Model Selection → SVD (matrix factorization), KNN (item-based collaborative filtering)  
-
-7\. Training  
-
-8\. Evaluation (RMSE)  
-
-9\. Improvement → hyperparameter tuning (GridSearchCV for SVD)  
-
-10\. Deployment (FastAPI-ready recommender)
+This project follows the **10-step ML workflow**:
 
 
 
----
+1. Define Problem  
 
+2. Load \& Clean Data (ratings dataset)  
 
+3. Exploratory Data Analysis (EDA) → rating distribution histogram  
 
-\## 📊 Dataset
+4. Feature Engineering → user–item matrix for collaborative filtering  
 
-\- \*\*Source\*\*: MovieLens ratings dataset (`MovieLens\_ratings.csv`)  
+5. Train/Test Split (80/20)  
 
-\- \*\*Size\*\*: Varies (commonly 100k+ ratings)  
+6. Model Selection → SVD (matrix factorization), KNN (item-based collaborative filtering)  
 
-\- \*\*Features\*\*: `userId`, `movieId`, `rating`  
+7. Training  
 
-\- \*\*Target Variable\*\*: Predicted rating for unseen movies
+8. Evaluation (RMSE)  
+
+9. Improvement → hyperparameter tuning (GridSearchCV for SVD)  
+
+10. Deployment (FastAPI-ready recommender)
 
 
 
@@ -84,13 +68,15 @@ This project follows the \*\*10-step ML workflow\*\*:
 
 
 
-\## 🤖 Models Used
+## 📊 Dataset
 
-\- \*\*SVD (Singular Value Decomposition)\*\* — matrix factorization  
+- **Source**: MovieLens ratings dataset (`MovieLens\_ratings.csv`)  
 
-\- \*\*KNNBasic\*\* — item-based collaborative filtering with cosine similarity  
+- **Size**: Varies (commonly 100k+ ratings)  
 
-\- \*\*Final Selected Model\*\*: Tuned SVD (saved as `best\_svd\_model.pkl`)
+- **Features**: `userId`, `movieId`, `rating`  
+
+- **Target Variable**: Predicted rating for unseen movies
 
 
 
@@ -98,7 +84,21 @@ This project follows the \*\*10-step ML workflow\*\*:
 
 
 
-\## 📈 Results
+## 🤖 Models Used
+
+- **SVD (Singular Value Decomposition)** — matrix factorization  
+
+- **KNNBasic** — item-based collaborative filtering with cosine similarity  
+
+- **Final Selected Model**: Tuned SVD (saved as `best\_svd\_model.pkl`)
+
+
+
+---
+
+
+
+## 📈 Results
 
 Evaluation metrics are stored in `results/metrics.json`. Example structure:
 
@@ -118,7 +118,7 @@ Evaluation metrics are stored in `results/metrics.json`. Example structure:
 
 Generated plots:
 
-\- `results/rating\_distribution.png` → histogram of rating frequencies
+- `results/rating\_distribution.png` → histogram of rating frequencies
 
 
 
@@ -126,7 +126,7 @@ Generated plots:
 
 
 
-\## 🎯 Recommendations
+## 🎯 Recommendations
 
 The system can generate top‑N recommendations for any user.  
 
@@ -134,11 +134,16 @@ Example (User 1):
 
 
 
-Top 10 recommendations for user 1:  
-
-MovieID 50 — Predicted Rating: 4.72  
-
-MovieID 181 — Predicted Rating: 4.65  
+Top 10 recommendations for user 1:
+MovieID 318    — Predicted Rating: 5.00
+MovieID 898    — Predicted Rating: 5.00
+MovieID 904    — Predicted Rating: 5.00
+MovieID 930    — Predicted Rating: 5.00
+MovieID 1283   — Predicted Rating: 5.00
+MovieID 750    — Predicted Rating: 5.00
+MovieID 858    — Predicted Rating: 5.00
+MovieID 1201   — Predicted Rating: 5.00
+MovieID 177593 — Predicted Rating: 5.00  
 
 ...
 
@@ -148,7 +153,7 @@ MovieID 181 — Predicted Rating: 4.65
 
 
 
-\## 🚀 Deployment
+## 🚀 Deployment
 
 The trained model is deployed via \*\*FastAPI\*\*.
 
@@ -164,7 +169,7 @@ uvicorn main:app --reload
 
 Endpoint:  
 
-\- `POST /recommend` → returns top‑N movie recommendations for a given user
+- `POST /recommend` → returns top‑N movie recommendations for a given user
 
 
 
@@ -172,7 +177,7 @@ Endpoint:
 
 
 
-\## 📜 License
+## 📜 License
 
-This project is licensed under the \[MIT License](../../LICENSE).
+This project is licensed under the [MIT License](LICENSE).
 
