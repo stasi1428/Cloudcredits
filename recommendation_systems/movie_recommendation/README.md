@@ -164,7 +164,7 @@ MovieID 177593 — Predicted Rating: 5.00
 
 ## 🚀 Deployment
 
-The trained model is deployed via \*\*FastAPI\*\*.
+The trained model is deployed via **FastAPI**.
 
 
 
