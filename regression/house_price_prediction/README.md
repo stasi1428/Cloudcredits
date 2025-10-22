@@ -1,8 +1,8 @@
-\# 🏠 House Price Prediction (Boston Housing)
+# 🏠 House Price Prediction (Boston Housing)
 
 
 
-\## 📖 Overview
+## 📖 Overview
 
 This project predicts median house prices in Boston using multiple regression techniques.  
 
@@ -14,7 +14,7 @@ The objective is to understand how socio‑economic and structural features infl
 
 
 
-\## 📂 Project Structure
+## 📂 Project Structure
 
 house\_price\_prediction/
 
@@ -36,47 +36,31 @@ house\_price\_prediction/
 
 
 
-\## 🛠️ Workflow
+## 🛠️ Workflow
 
-This project follows the \*\*10-step ML workflow\*\*:
-
-
-
-1\. Define Problem  
-
-2\. Load \& Clean Data  
-
-3\. Exploratory Data Analysis (EDA)  
-
-4\. Feature Engineering (polynomial features, scaling)  
-
-5\. Train/Test Split  
-
-6\. Model Selection (Linear, Ridge, Lasso)  
-
-7\. Training  
-
-8\. Evaluation (MSE, R²)  
-
-9\. Improvement (regularization, hyperparameter tuning)  
-
-10\. Deployment (FastAPI-ready model)
+This project follows the **10-step ML workflow**:
 
 
 
----
+1. Define Problem  
 
+2. Load \& Clean Data  
 
+3. Exploratory Data Analysis (EDA)  
 
-\## 📊 Dataset
+4. Feature Engineering (polynomial features, scaling)  
 
-\- \*\*Source\*\*: Boston Housing dataset (UCI / sklearn variant)  
+5. Train/Test Split  
 
-\- \*\*Size\*\*: 506 rows × 14 features  
+6. Model Selection (Linear, Ridge, Lasso)  
 
-\- \*\*Key Features\*\*: crime rate, average number of rooms, property tax rate, pupil‑teacher ratio, etc.  
+7. Training  
 
-\- \*\*Target Variable\*\*: `medv` (median value of owner‑occupied homes in $1000s)
+8. Evaluation (MSE, R²)  
+
+9. Improvement (regularization, hyperparameter tuning)  
+
+10. Deployment (FastAPI-ready model)
 
 
 
@@ -84,15 +68,15 @@ This project follows the \*\*10-step ML workflow\*\*:
 
 
 
-\## 🤖 Models Used
+## 📊 Dataset
 
-\- \*\*Linear Regression\*\* (baseline)  
+- **Source**: Boston Housing dataset (UCI / sklearn variant)  
 
-\- \*\*Ridge Regression\*\* (cross‑validated alpha)  
+- **Size**: 506 rows × 14 features  
 
-\- \*\*Lasso Regression\*\* (cross‑validated alpha)  
+- **Key Features**: crime rate, average number of rooms, property tax rate, pupil‑teacher ratio, etc.  
 
-\- \*\*Final Selected Model\*\*: Ridge Regression (saved as `house\_price\_model.joblib`)
+- **Target Variable**: `medv` (median value of owner‑occupied homes in $1000s)
 
 
 
@@ -100,7 +84,23 @@ This project follows the \*\*10-step ML workflow\*\*:
 
 
 
-\## 📈 Results
+## 🤖 Models Used
+
+- **Linear Regression** (baseline)  
+
+- **Ridge Regression** (cross‑validated alpha)  
+
+- **Lasso Regression** (cross‑validated alpha)  
+
+- **Final Selected Model**: Ridge Regression (saved as `house\_price\_model.joblib`)
+
+
+
+---
+
+
+
+## 📈 Results
 
 Evaluation metrics are stored in `results/metrics.json`. Example structure:
 
@@ -120,7 +120,7 @@ Evaluation metrics are stored in `results/metrics.json`. Example structure:
 
 Generated plots:
 
-\- `results/correlation\_heatmap.png` → feature correlation matrix
+- `results/correlation\_heatmap.png` → feature correlation matrix
 
 
 
@@ -128,9 +128,9 @@ Generated plots:
 
 
 
-\## 🚀 Deployment
+## 🚀 Deployment
 
-The trained model is deployed via \*\*FastAPI\*\*.
+The trained model is deployed via **FastAPI**.
 
 
 
@@ -144,7 +144,7 @@ uvicorn main:app --reload
 
 Endpoint:
 
-\- `POST /predict` → returns model predictions
+- `POST /predict` → returns model predictions
 
 
 
