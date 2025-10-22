@@ -162,7 +162,7 @@ Generated plots:
 
 ## 🚀 Deployment
 
-The trained model is deployed via \*\*FastAPI\*\*.
+The trained model is deployed via **FastAPI**.
 
 
 
@@ -186,5 +186,5 @@ Endpoint:
 
 ## 📜 License
 
-This project is licensed under the MIT License (LICENSE).
+This project is licensed under the [MIT License](LICENSE).
 
