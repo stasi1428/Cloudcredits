@@ -1,12 +1,12 @@
-\# 🎬 IMDb Sentiment Analysis
+# 🎬 IMDb Sentiment Analysis
 
 
 
-\## 📖 Overview
+## 📖 Overview
 
-This project performs \*\*binary sentiment classification\*\* (positive vs negative) on the \*\*IMDb movie reviews dataset\*\*.  
+This project performs **binary sentiment classification** (positive vs negative) on the **IMDb movie reviews dataset**.  
 
-Two approaches are benchmarked: a \*\*Naive Bayes classifier with TF-IDF features\*\* and a \*\*deep learning LSTM model\*\* for sequence-based sentiment analysis.
+Two approaches are benchmarked: a **Naive Bayes classifier with TF-IDF features** and a **deep learning LSTM model** for sequence-based sentiment analysis.
 
 
 
@@ -14,7 +14,7 @@ Two approaches are benchmarked: a \*\*Naive Bayes classifier with TF-IDF feature
 
 
 
-\## 📂 Project Structure
+## 📂 Project Structure
 
 sentiment\_analysis\_imdb/  
 
@@ -36,49 +36,31 @@ sentiment\_analysis\_imdb/
 
 
 
-\## 🛠️ Workflow
+## 🛠️ Workflow
 
-This project follows the \*\*10-step ML workflow\*\*:
-
-
-
-1\. Define Problem  
-
-2\. Load \& Clean Data (remove HTML tags, non-alphabetic chars, lowercase text)  
-
-3\. Exploratory Data Analysis (EDA) → review length distribution by sentiment  
-
-4\. Feature Engineering → TF-IDF features for Naive Bayes, tokenization + padding for LSTM  
-
-5\. Train/Test Split (80/20, stratified)  
-
-6\. Model Selection → Naive Bayes, LSTM  
-
-7\. Training (Naive Bayes with TF-IDF, LSTM with embeddings)  
-
-8\. Evaluation (accuracy, F1-score, classification report)  
-
-9\. Improvement → hyperparameter tuning, deeper LSTM layers  
-
-10\. Deployment (FastAPI-ready models)
+This project follows the **10-step ML workflow**:
 
 
 
----
+1. Define Problem  
 
+2. Load \& Clean Data (remove HTML tags, non-alphabetic chars, lowercase text)  
 
+3. Exploratory Data Analysis (EDA) → review length distribution by sentiment  
 
-\## 📊 Dataset
+4. Feature Engineering → TF-IDF features for Naive Bayes, tokenization + padding for LSTM  
 
-\- \*\*Source\*\*: IMDb movie reviews dataset (`IMDB Dataset.csv`)  
+5. Train/Test Split (80/20, stratified)  
 
-\- \*\*Size\*\*: 50,000 reviews (25k positive, 25k negative)  
+6. Model Selection → Naive Bayes, LSTM  
 
-\- \*\*Features\*\*: `review` (text)  
+7. Training (Naive Bayes with TF-IDF, LSTM with embeddings)  
 
-\- \*\*Target Variable\*\*: `sentiment` (positive = 1, negative = 0)  
+8. Evaluation (accuracy, F1-score, classification report)  
 
-\- \*\*Preprocessing\*\*: HTML tag removal, punctuation removal, lowercasing, tokenization
+9. Improvement → hyperparameter tuning, deeper LSTM layers  
+
+10. Deployment (FastAPI-ready models)
 
 
 
@@ -86,13 +68,31 @@ This project follows the \*\*10-step ML workflow\*\*:
 
 
 
-\## 🤖 Models Used
+## 📊 Dataset
 
-\- \*\*Naive Bayes (MultinomialNB)\*\* with TF-IDF features  
+- **Source**: IMDb movie reviews dataset (`IMDB Dataset.csv`)  
 
-\- \*\*LSTM (Long Short-Term Memory)\*\* with embedding + dropout layers  
+- **Size**: 50,000 reviews (25k positive, 25k negative)  
 
-\- \*\*Final Artifacts\*\*:  
+- **Features**: `review` (text)  
+
+- **Target Variable**: `sentiment` (positive = 1, negative = 0)  
+
+- **Preprocessing**: HTML tag removal, punctuation removal, lowercasing, tokenization
+
+
+
+---
+
+
+
+## 🤖 Models Used
+
+- **Naive Bayes (MultinomialNB)** with TF-IDF features  
+
+- **LSTM (Long Short-Term Memory)** with embedding + dropout layers  
+
+- **Final Artifacts**:  
 
 &nbsp; - `imdb\_nb\_pipeline.joblib` (Naive Bayes pipeline)  
 
@@ -106,7 +106,7 @@ This project follows the \*\*10-step ML workflow\*\*:
 
 
 
-\## 📈 Results
+## 📈 Results
 
 Evaluation metrics are stored in `results/metrics.json`. Example structure:
 
@@ -138,7 +138,7 @@ Evaluation metrics are stored in `results/metrics.json`. Example structure:
 
 Generated plots:
 
-\- `results/review\_length\_distribution.png` → histogram of review lengths by sentiment
+- `results/review\_length\_distribution.png` → histogram of review lengths by sentiment
 
 
 
@@ -146,9 +146,9 @@ Generated plots:
 
 
 
-\## 🚀 Deployment
+## 🚀 Deployment
 
-The trained models are deployed via \*\*FastAPI\*\*.
+The trained models are deployed via **FastAPI**.
 
 
 
@@ -162,9 +162,9 @@ uvicorn main:app --reload
 
 Endpoints:
 
-\- `POST /predict\_nb` → returns sentiment prediction using Naive Bayes  
+- `POST /predict\_nb` → returns sentiment prediction using Naive Bayes  
 
-\- `POST /predict\_lstm` → returns sentiment prediction using LSTM  
+- `POST /predict\_lstm` → returns sentiment prediction using LSTM  
 
 
 
@@ -172,7 +172,7 @@ Endpoints:
 
 
 
-\## 📜 License
+## 📜 License
 
-This project is licensed under the \[MIT License](../../LICENSE).
+This project is licensed under the [MIT License](LICENSE).
 
