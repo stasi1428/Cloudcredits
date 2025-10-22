@@ -1,12 +1,12 @@
-\# 🌸 Iris Flower Classification
+# 🌸 Iris Flower Classification
 
 
 
-\## 📖 Overview
+## 📖 Overview
 
-This project classifies iris flowers into three species (\*Setosa, Versicolor, Virginica\*) using classical machine learning models.  
+This project classifies iris flowers into three species (*Setosa, Versicolor, Virginica*) using classical machine learning models.  
 
-The goal is to benchmark \*\*Decision Tree\*\* and \*\*Logistic Regression\*\* classifiers on the well-known Iris dataset, and to demonstrate model selection, evaluation, and hyperparameter tuning.
+The goal is to benchmark **Decision Tree** and **Logistic Regression** classifiers on the well-known Iris dataset, and to demonstrate model selection, evaluation, and hyperparameter tuning.
 
 
 
@@ -14,7 +14,7 @@ The goal is to benchmark \*\*Decision Tree\*\* and \*\*Logistic Regression\*\* c
 
 
 
-\## 📂 Project Structure
+## 📂 Project Structure
 
 iris\_classification/  
 
@@ -36,47 +36,31 @@ iris\_classification/
 
 
 
-\## 🛠️ Workflow
+## 🛠️ Workflow
 
-This project follows the \*\*10-step ML workflow\*\*:
-
-
-
-1\. Define Problem  
-
-2\. Load \& Clean Data (drop missing values, normalize column names)  
-
-3\. Exploratory Data Analysis (EDA) → pairplot of features by species  
-
-4\. Feature Engineering → scaling numeric features  
-
-5\. Train/Test Split (80/20, stratified)  
-
-6\. Model Selection → Decision Tree, Logistic Regression  
-
-7\. Training  
-
-8\. Evaluation (accuracy, confusion matrix)  
-
-9\. Improvement → hyperparameter tuning (Decision Tree depth)  
-
-10\. Deployment (FastAPI-ready model)
+This project follows the **10-step ML workflow**:
 
 
 
----
+1. Define Problem  
 
+2. Load \& Clean Data (drop missing values, normalize column names)  
 
+3. Exploratory Data Analysis (EDA) → pairplot of features by species  
 
-\## 📊 Dataset
+4. Feature Engineering → scaling numeric features  
 
-\- \*\*Source\*\*: Iris dataset (`iris.csv`)  
+5. Train/Test Split (80/20, stratified)  
 
-\- \*\*Size\*\*: 150 rows × 5 columns  
+6. Model Selection → Decision Tree, Logistic Regression  
 
-\- \*\*Features\*\*: sepal length, sepal width, petal length, petal width  
+7. Training  
 
-\- \*\*Target Variable\*\*: `species` (Setosa, Versicolor, Virginica)
+8. Evaluation (accuracy, confusion matrix)  
+
+9. Improvement → hyperparameter tuning (Decision Tree depth)  
+
+10. Deployment (FastAPI-ready model)
 
 
 
@@ -84,13 +68,15 @@ This project follows the \*\*10-step ML workflow\*\*:
 
 
 
-\## 🤖 Models Used
+## 📊 Dataset
 
-\- \*\*Decision Tree Classifier\*\* (baseline, tuned with GridSearchCV)  
+- **Source**: Iris dataset (`iris.csv`)  
 
-\- \*\*Logistic Regression\*\* (max\_iter=200)  
+- **Size**: 150 rows × 5 columns  
 
-\- \*\*Final Selected Model\*\*: Tuned Decision Tree (saved as `iris\_classifier.joblib`)
+- **Features**: sepal length, sepal width, petal length, petal width  
+
+- **Target Variable**: `species` (Setosa, Versicolor, Virginica)
 
 
 
@@ -98,7 +84,21 @@ This project follows the \*\*10-step ML workflow\*\*:
 
 
 
-\## 📈 Results
+## 🤖 Models Used
+
+- **Decision Tree Classifier** (baseline, tuned with GridSearchCV)  
+
+- **Logistic Regression** (max\_iter=200)  
+
+- **Final Selected Model**: Tuned Decision Tree (saved as `iris\_classifier.joblib`)
+
+
+
+---
+
+
+
+## 📈 Results
 
 Evaluation metrics are stored in `results/metrics.json`. Example structure:
 
@@ -118,7 +118,7 @@ Evaluation metrics are stored in `results/metrics.json`. Example structure:
 
 Generated plots:
 
-\- `results/pairplot.png` → pairwise feature visualization by species
+- `results/pairplot.png` → pairwise feature visualization by species
 
 
 
@@ -126,9 +126,9 @@ Generated plots:
 
 
 
-\## 🚀 Deployment
+## 🚀 Deployment
 
-The trained model is deployed via \*\*FastAPI\*\*.
+The trained model is deployed via **FastAPI**.
 
 
 
@@ -142,7 +142,7 @@ uvicorn main:app --reload
 
 Endpoint:
 
-\- `POST /predict` → returns predicted species
+- `POST /predict` → returns predicted species
 
 
 
@@ -150,7 +150,7 @@ Endpoint:
 
 
 
-\## 📜 License
+## 📜 License
 
-This project is licensed under the \[MIT License](../../LICENSE).
+This project is licensed under the [MIT License](LICENSE).
 
