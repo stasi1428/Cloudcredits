@@ -152,13 +152,13 @@ Evaluation metrics are stored in `results/metrics.json`. Example structure:
 
 Generated plots:
 
-\- `results/outcome\_distribution.png` → class distribution  
+- `results/outcome\_distribution.png` → class distribution  
 
-\- `results/\*\_distribution.png` → feature histograms  
+- `results/\*\_distribution.png` → feature histograms  
 
-\- `results/\*\_boxplot.png` → feature vs outcome boxplots  
+- `results/\*\_boxplot.png` → feature vs outcome boxplots  
 
-\- `results/correlation\_heatmap.png` → feature correlations  
+- `results/correlation\_heatmap.png` → feature correlations  
 
 
 
@@ -166,9 +166,9 @@ Generated plots:
 
 
 
-\## 🚀 Deployment
+## 🚀 Deployment
 
-The trained model is deployed via \*\*FastAPI\*\*.
+The trained model is deployed via **FastAPI**.
 
 
 
@@ -182,7 +182,7 @@ uvicorn main:app --reload
 
 Endpoint:
 
-\- `POST /predict` → returns diabetes prediction
+- `POST /predict` → returns diabetes prediction
 
 
 
@@ -190,7 +190,7 @@ Endpoint:
 
 
 
-\## 📜 License
+## 📜 License
 
-This project is licensed under the \[MIT License](../../LICENSE).
+This project is licensed under the [MIT License](LICENSE).
 
