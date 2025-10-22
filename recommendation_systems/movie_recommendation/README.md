@@ -135,6 +135,7 @@ Example (User 1):
 
 
 Top 10 recommendations for user 1:
+
 MovieID 318    — Predicted Rating: 5.00
 
 MovieID 898    — Predicted Rating: 5.00
