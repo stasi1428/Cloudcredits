@@ -1,8 +1,8 @@
-\# 📈 Stock Price Forecasting with LSTM
+# 📈 Stock Price Forecasting with LSTM
 
 
 
-\## 📖 Overview
+## 📖 Overview
 
 This project forecasts stock prices using a \*\*Long Short-Term Memory (LSTM)\*\* neural network.  
 
@@ -14,7 +14,7 @@ The goal is to capture temporal dependencies in financial time series data and e
 
 
 
-\## 📂 Project Structure
+## 📂 Project Structure
 
 stock\_price\_forecasting/  
 
@@ -36,31 +36,31 @@ stock\_price\_forecasting/
 
 
 
-\## 🛠️ Workflow
+## 🛠️ Workflow
 
-This project follows the \*\*10-step ML workflow\*\*:
+This project follows the **10-step ML workflow**:
 
 
 
-1\. Define Problem  
+1. Define Problem  
 
-2\. Load \& Clean Data (parse dates, clean price column)  
+2. Load \& Clean Data (parse dates, clean price column)  
 
-3\. Exploratory Data Analysis (EDA) → price trend plots  
+3. Exploratory Data Analysis (EDA) → price trend plots  
 
-4\. Feature Engineering → sequence generation (60-day lookback)  
+4. Feature Engineering → sequence generation (60-day lookback)  
 
-5\. Train/Test Split (80/20)  
+5. Train/Test Split (80/20)  
 
-6\. Model Selection → LSTM architecture with dropout + dense layers  
+6. Model Selection → LSTM architecture with dropout + dense layers  
 
-7\. Training (20 epochs, batch size 32)  
+7. Training (20 epochs, batch size 32)  
 
-8\. Evaluation (MAE, RMSE)  
+8. Evaluation (MAE, RMSE)  
 
-9\. Improvement (hyperparameter tuning, deeper LSTM layers)  
+9. Improvement (hyperparameter tuning, deeper LSTM layers)  
 
-10\. Deployment (FastAPI-ready model)
+10. Deployment (FastAPI-ready model)
 
 
 
@@ -68,15 +68,15 @@ This project follows the \*\*10-step ML workflow\*\*:
 
 
 
-\## 📊 Dataset
+## 📊 Dataset
 
-\- \*\*Source\*\*: Yahoo Finance industry dataset (`YahooFinance\_Industry.csv`)  
+- **Source**: Yahoo Finance industry dataset (`YahooFinance\_Industry.csv`)  
 
-\- \*\*Features\*\*: Date, Symbol, Close/Price  
+- **Features**: Date, Symbol, Close/Price  
 
-\- \*\*Target Variable\*\*: Stock closing price  
+- **Target Variable**: Stock closing price  
 
-\- \*\*Preprocessing\*\*:  
+- **Preprocessing**:  
 
 &nbsp; - Removed formatting artifacts (commas, symbols)  
 
@@ -90,23 +90,23 @@ This project follows the \*\*10-step ML workflow\*\*:
 
 
 
-\## 🤖 Model Architecture
+## 🤖 Model Architecture
 
-\- \*\*LSTM Layer\*\* (50 units, return sequences)  
+- **LSTM Layer** (50 units, return sequences)  
 
-\- \*\*Dropout\*\* (0.2)  
+- **Dropout** (0.2)  
 
-\- \*\*LSTM Layer\*\* (50 units, return final sequence)  
+- **LSTM Layer** (50 units, return final sequence)  
 
-\- \*\*Dropout\*\* (0.2)  
+- **Dropout** (0.2)  
 
-\- \*\*Dense Layer\*\* (25 units, ReLU activation)  
+- **Dense Layer** (25 units, ReLU activation)  
 
-\- \*\*Dense Output Layer\*\* (1 unit)  
+- **Dense Output Layer** (1 unit)  
 
-\- \*\*Optimizer\*\*: Adam  
+- **Optimizer**: Adam  
 
-\- \*\*Loss Function\*\*: Mean Squared Error  
+- **Loss Function**: Mean Squared Error  
 
 
 
@@ -114,7 +114,7 @@ This project follows the \*\*10-step ML workflow\*\*:
 
 
 
-\## 📈 Results
+## 📈 Results
 
 Evaluation metrics are stored in `results/metrics.json`. Example structure:
 
@@ -132,7 +132,7 @@ Evaluation metrics are stored in `results/metrics.json`. Example structure:
 
 Generated plots:
 
-\- `results/AAPL\_price\_trend.png` → stock price trend over time
+- `results/AAPL\_price\_trend.png` → stock price trend over time
 
 
 
@@ -140,15 +140,15 @@ Generated plots:
 
 
 
-\## 🚀 Deployment
+## 🚀 Deployment
 
 The trained model and scaler are saved for deployment:
 
 
 
-\- Model: `models/lstm\_stock\_AAPL.h5`  
+- Model: `models/lstm\_stock\_AAPL.h5`  
 
-\- Scaler: `models/scaler\_stock\_AAPL.pkl`  
+- Scaler: `models/scaler\_stock\_AAPL.pkl`  
 
 
 
@@ -162,7 +162,7 @@ uvicorn main:app --reload
 
 Endpoint:
 
-\- `POST /predict` → returns forecasted stock prices
+- `POST /predict` → returns forecasted stock prices
 
 
 
@@ -170,7 +170,7 @@ Endpoint:
 
 
 
-\## 📜 License
+## 📜 License
 
-This project is licensed under the \[MIT License](../../LICENSE).
+This project is licensed under the [MIT License](../../LICENSE).
 
