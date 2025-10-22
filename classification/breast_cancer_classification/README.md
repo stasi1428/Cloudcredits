@@ -1,12 +1,12 @@
-\# 🎗️ Breast Cancer Classification (Wisconsin Dataset)
+# 🎗️ Breast Cancer Classification (Wisconsin Dataset)
 
 
 
-\## 📖 Overview
+## 📖 Overview
 
-This project classifies breast cancer tumors as \*\*benign (0)\*\* or \*\*malignant (1)\*\* using the \*\*Breast Cancer Wisconsin dataset\*\*.  
+This project classifies breast cancer tumors as **benign (0)** or **malignant (1)** using the **Breast Cancer Wisconsin dataset**.  
 
-The goal is to benchmark \*\*Support Vector Machines (SVM)\*\* and \*\*Random Forest\*\* classifiers, evaluate their performance, and select the best model through hyperparameter tuning.
+The goal is to benchmark **Support Vector Machines (SVM)** and **Random Forest** classifiers, evaluate their performance, and select the best model through hyperparameter tuning.
 
 
 
@@ -14,7 +14,7 @@ The goal is to benchmark \*\*Support Vector Machines (SVM)\*\* and \*\*Random Fo
 
 
 
-\## 📂 Project Structure
+## 📂 Project Structure
 
 breast\_cancer\_classification/  
 
@@ -36,47 +36,31 @@ breast\_cancer\_classification/
 
 
 
-\## 🛠️ Workflow
+## 🛠️ Workflow
 
-This project follows the \*\*10-step ML workflow\*\*:
-
-
-
-1\. Define Problem  
-
-2\. Load \& Clean Data (map labels: B → 0, M → 1; drop empty columns)  
-
-3\. Exploratory Data Analysis (EDA) → class balance, correlation heatmap  
-
-4\. Feature Engineering → standard scaling of numeric features  
-
-5\. Train/Test Split (80/20, stratified)  
-
-6\. Model Selection → SVM, Random Forest  
-
-7\. Training  
-
-8\. Evaluation (accuracy, precision, recall, F1-score, classification report)  
-
-9\. Improvement → hyperparameter tuning (Random Forest depth, estimators)  
-
-10\. Deployment (FastAPI-ready model)
+This project follows the **10-step ML workflow**:
 
 
 
----
+1. Define Problem  
 
+2. Load \& Clean Data (map labels: B → 0, M → 1; drop empty columns)  
 
+3. Exploratory Data Analysis (EDA) → class balance, correlation heatmap  
 
-\## 📊 Dataset
+4. Feature Engineering → standard scaling of numeric features  
 
-\- \*\*Source\*\*: Breast Cancer Wisconsin dataset (`breast\_cancer\_wisconsin.csv`)  
+5. Train/Test Split (80/20, stratified)  
 
-\- \*\*Size\*\*: ~569 rows × 30 features  
+6. Model Selection → SVM, Random Forest  
 
-\- \*\*Features\*\*: cell nucleus characteristics (radius, texture, smoothness, etc.)  
+7. Training  
 
-\- \*\*Target Variable\*\*: `y` (0 = Benign, 1 = Malignant)
+8. Evaluation (accuracy, precision, recall, F1-score, classification report)  
+
+9. Improvement → hyperparameter tuning (Random Forest depth, estimators)  
+
+10. Deployment (FastAPI-ready model)
 
 
 
@@ -84,15 +68,15 @@ This project follows the \*\*10-step ML workflow\*\*:
 
 
 
-\## 🤖 Models Used
+## 📊 Dataset
 
-\- \*\*Support Vector Machine (SVM)\*\* with RBF kernel  
+- **Source**: Breast Cancer Wisconsin dataset (`breast\_cancer\_wisconsin.csv`)  
 
-\- \*\*Random Forest Classifier\*\* (baseline + tuned with GridSearchCV)  
+- **Size**: ~569 rows × 30 features  
 
-\- \*\*Final Selected Model\*\*: Tuned Random Forest (saved as `breast\_rf.pkl`)  
+- **Features**: cell nucleus characteristics (radius, texture, smoothness, etc.)  
 
-\- Additional artifacts: `breast\_scaler.pkl` (scaler), `breast\_svm.pkl` (SVM model)
+- **Target Variable**: `y` (0 = Benign, 1 = Malignant)
 
 
 
@@ -100,7 +84,23 @@ This project follows the \*\*10-step ML workflow\*\*:
 
 
 
-\## 📈 Results
+## 🤖 Models Used
+
+- **Support Vector Machine (SVM)** with RBF kernel  
+
+- **Random Forest Classifier** (baseline + tuned with GridSearchCV)  
+
+- **Final Selected Model**: Tuned Random Forest (saved as `breast\_rf.pkl`)  
+
+- Additional artifacts: `breast\_scaler.pkl` (scaler), `breast\_svm.pkl` (SVM model)
+
+
+
+---
+
+
+
+## 📈 Results
 
 Evaluation metrics are stored in `results/metrics.json`. Example structure:
 
@@ -156,9 +156,9 @@ Evaluation metrics are stored in `results/metrics.json`. Example structure:
 
 Generated plots:
 
-\- `results/class\_balance.png` → benign vs malignant distribution  
+- `results/class\_balance.png` → benign vs malignant distribution  
 
-\- `results/correlation\_heatmap.png` → feature correlations  
+- `results/correlation\_heatmap.png` → feature correlations  
 
 
 
@@ -166,9 +166,9 @@ Generated plots:
 
 
 
-\## 🚀 Deployment
+## 🚀 Deployment
 
-The trained model is deployed via \*\*FastAPI\*\*.
+The trained model is deployed via **FastAPI**.
 
 
 
@@ -182,7 +182,7 @@ uvicorn main:app --reload
 
 Endpoint:
 
-\- `POST /predict` → returns tumor classification (benign or malignant)
+- `POST /predict` → returns tumor classification (benign or malignant)
 
 
 
@@ -190,7 +190,7 @@ Endpoint:
 
 
 
-\## 📜 License
+## 📜 License
 
-This project is licensed under the \[MIT License](../../LICENSE).
+This project is licensed under the [MIT License](../../LICENSE).
 
